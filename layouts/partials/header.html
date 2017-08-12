@@ -12,6 +12,28 @@
   {{ with .Site.Params.description }}
     <p class="text-right remove-margin-bottom add-padding-right">{{ . | markdownify }}</p>
   {{ end }}
+    <div class="text-right add-padding-right">
+
+      {{with .Site.Params.email}}
+      <a href="mailto:{{.}}"><i class="fa fa-email-square fa-2x"></i></a>
+      {{end}}
+
+      {{with .Site.Params.github}}
+      <a href="https://github.com/{{.}}" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+      {{end}}
+
+      {{with .Site.Params.twitter}}
+      <a href="https://twitter.com/{{.}}" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+      {{end}}
+
+      {{with .Site.Params.linkedin}}
+      <a href="https://www.linkedin.com/in/{{.}}" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+      {{end}}
+
+      <a href="{{ .Site.BaseURL }}index.xml" rel="me"><i class="fa fa-rss-square fa-2x"></i></a> 
+
+    </div>
+
 </header>
 
 
