@@ -1,3 +1,7 @@
+{{ if .Params.mathjax}}
+{{ partial "mathjax-support.html" . }}
+{{ end }}
+
 <header class="text-center">
   {{ with .Site.Params.authorImage }} <img src="{{ $.Site.BaseURL }}img/{{ . }}" class="img-circle s200"> {{ end }}
 
